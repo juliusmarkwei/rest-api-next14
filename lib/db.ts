@@ -17,7 +17,6 @@ const connect = async () => {
 
   try {
     mongoose.connect(MONGODB_URI!, {
-      dbName: "rest-api-next14",
       bufferCommands: true,
     });
     console.log("Database connected");
