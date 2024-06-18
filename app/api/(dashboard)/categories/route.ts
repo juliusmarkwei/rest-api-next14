@@ -1,5 +1,5 @@
 import connect from "@/lib/db";
-import User from "@/lib/models/users";
+import User from "@/lib/models/user";
 import Category from "@/lib/models/category";
 import { NextResponse } from "next/server";
 import { Types } from "mongoose";
