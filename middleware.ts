@@ -13,10 +13,11 @@ export default function middleware(req: Request) {
 	}
 
 	const authResult = authMiddleware(req);
-	if (!authResult.isValid && req.url.includes("/api/")) {
-		return new NextResponse(JSON.stringify({ message: "Unauthorized" }), {
-			status: 401,
-		});
-	}
+	// this line has been commented out for learning purposes
+	// if (!authResult.isValid && req.url.includes("/api/")) {
+	// 	return new NextResponse(JSON.stringify({ message: "Unauthorized" }), {
+	// 		status: 401,
+	// 	});
+	// }
 	return NextResponse.next();
 }
